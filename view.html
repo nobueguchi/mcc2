@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<div data-screen-label="anniversary-anim" ref="{{ root }}" style="position:absolute;inset:0;overflow:hidden;background:#ffffff;display:flex;align-items:center;justify-content:center;">
+  <div ref="{{ stage }}" style="position:relative;width:3360px;height:1634px;transform-origin:top left;flex:none;">
+
+    <div style="position:absolute;top:0;left:0;width:3360px;height:1634px;background:#ffffff;z-index:0;"></div>
+
+    <img ref="{{ patternA }}" src="assets/patternA.svg" draggable="false" style="position:absolute;top:0;left:0;width:3360px;height:1634px;z-index:1;opacity:0;pointer-events:none;transform-origin:center;">
+
+    <img ref="{{ line }}" src="assets/line.svg" draggable="false" style="position:absolute;top:1444px;left:0px;width:3360px;height:13px;z-index:2;pointer-events:none;clip-path:inset(0 100% 0 0);">
+
+    <img ref="{{ boxClosed }}" src="assets/boxClosed.svg" draggable="false" style="position:absolute;top:1241px;left:2635px;width:308px;height:266px;z-index:3;opacity:0;pointer-events:none;transform-origin:150px 139px;transform:scale(0.5);">
+    <img ref="{{ boxGrad }}" src="assets/boxGrad.svg" draggable="false" style="position:absolute;top:1241px;left:2635px;width:308px;height:266px;z-index:3;opacity:0;pointer-events:none;transform-origin:150px 139px;">
+    <img ref="{{ boxOpen }}" src="assets/boxOpen.svg" draggable="false" style="position:absolute;top:1164px;left:2586px;width:407px;height:343px;z-index:4;opacity:0;pointer-events:none;transform-origin:203px 196px;transform:scale(0.9);">
+
+    <img ref="{{ logo }}" src="assets/logo.svg" draggable="false" style="position:absolute;top:649px;left:863px;width:664px;height:558px;z-index:6;opacity:0;pointer-events:none;">
+
+    <img ref="{{ itemA }}" src="assets/itemA.svg" draggable="false" style="position:absolute;top:945px;left:2591px;width:217px;height:260px;z-index:6;opacity:0;pointer-events:none;transform-origin:149px 135px;">
+    <img ref="{{ itemB }}" src="assets/itemB.svg" draggable="false" style="position:absolute;top:670px;left:2735px;width:164px;height:144px;z-index:6;opacity:0;pointer-events:none;transform-origin:105px 50px;">
+    <img ref="{{ itemC }}" src="assets/itemC.svg" draggable="false" style="position:absolute;top:964px;left:2881px;width:118px;height:104px;z-index:6;opacity:0;pointer-events:none;transform-origin:79px 56px;">
+
+    <img ref="{{ textF4 }}" src="assets/textF4.svg" draggable="false" style="position:absolute;top:787px;left:1635px;width:832px;height:350px;z-index:7;opacity:0;pointer-events:none;">
+
+    <div ref="{{ gradient }}" style="position:absolute;top:0;left:0;width:3360px;height:1634px;z-index:20;background:linear-gradient(90deg,#f29600 0%,#e60012 63.6%,#e60012 100%);clip-path:inset(0% 100% 0% 0%);"></div>
+
+    <img ref="{{ patternG }}" src="assets/patternA.svg" draggable="false" style="position:absolute;top:0;left:0;width:3360px;height:1634px;z-index:21;opacity:0;pointer-events:none;">
+
+    <div ref="{{ circleGroup }}" style="position:absolute;top:0;left:0;width:3360px;height:1634px;z-index:30;background:#ffffff;clip-path:circle(0px at 1680px 918px);">
+      <img src="assets/patternA.svg" draggable="false" style="position:absolute;top:0;left:0;width:3360px;height:1634px;pointer-events:none;opacity:0.85;">
+    </div>
+
+    <div style="position:absolute;top:0;left:0;width:3360px;height:1634px;z-index:40;pointer-events:none;clip-path:circle(1049px at 1680px 918px);">
+      <img ref="{{ lineF6 }}" src="assets/lineF6.svg" draggable="false" style="position:absolute;top:1444px;left:760px;width:1840px;height:13px;opacity:0;pointer-events:none;clip-path:inset(0 100% 0 0);">
+    </div>
+    <img ref="{{ boxOpenF6 }}" src="assets/boxOpenF6.svg" draggable="false" style="position:absolute;top:1165px;left:1466px;width:407px;height:343px;z-index:41;opacity:0;pointer-events:none;transform-origin:324px 235px;">
+    <img ref="{{ f6a }}" src="assets/f6a.svg" draggable="false" style="position:absolute;top:1134px;left:298px;width:93px;height:107px;z-index:41;opacity:0;pointer-events:none;transform-origin:132px 46px;">
+    <img ref="{{ f6b }}" src="assets/f6b.svg" draggable="false" style="position:absolute;top:483px;left:847px;width:149px;height:149px;z-index:41;opacity:0;pointer-events:none;transform-origin:73px 37px;">
+    <img ref="{{ f6c }}" src="assets/f6c.svg" draggable="false" style="position:absolute;top:359px;left:2171px;width:164px;height:145px;z-index:41;opacity:0;pointer-events:none;transform-origin:129px 111px;">
+    <img ref="{{ f6d }}" src="assets/f6d.svg" draggable="false" style="position:absolute;top:589px;left:2778px;width:171px;height:151px;z-index:41;opacity:0;pointer-events:none;transform-origin:142px 111px;">
+    <img ref="{{ f6e }}" src="assets/f6e.svg" draggable="false" style="position:absolute;top:1154px;left:2915px;width:207px;height:215px;z-index:41;opacity:0;pointer-events:none;transform-origin:155px 36px;">
+    <img ref="{{ f6f }}" src="assets/f6f.svg" draggable="false" style="position:absolute;top:890px;left:2368px;width:120px;height:107px;z-index:41;opacity:0;pointer-events:none;transform-origin:102px 25px;">
+    <img ref="{{ f6L }}" src="assets/f6L.svg" draggable="false" style="position:absolute;top:1226px;left:1054px;width:87px;height:83px;z-index:41;opacity:0;pointer-events:none;transform-origin:41px 44px;">
+    <img ref="{{ textF6 }}" src="assets/textF6.svg" draggable="false" style="position:absolute;top:640px;left:1071px;width:1219px;height:350px;z-index:42;opacity:0;pointer-events:none;">
+
+  </div>
+
+  <button ref="{{ replayBtn }}" onclick="{{ onReplay }}" aria-label="Replay" style="position:absolute;right:28px;bottom:28px;width:56px;height:56px;border:none;border-radius:50%;background:linear-gradient(135deg,#f29600,#e60012);color:#fff;font-size:26px;line-height:1;cursor:pointer;opacity:0;transition:opacity .5s ease, transform .2s ease;box-shadow:0 6px 20px rgba(230,0,18,.35);display:flex;align-items:center;justify-content:center;z-index:100;" style-hover="transform:scale(1.08)">↻</button>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: {&quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: &quot;100%&quot;},
+  &quot;durationSec&quot;: {&quot;editor&quot;: &quot;float&quot;, &quot;default&quot;: 13, &quot;min&quot;: 8, &quot;max&quot;: 24, &quot;step&quot;: 0.5, &quot;tsType&quot;: &quot;number&quot;},
+  &quot;replayButton&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}
+}">
+
+class Component extends DCLogic {
+  refsMap = Object.fromEntries(
+    ['root','stage','patternA','line','boxClosed','boxGrad','boxOpen','logo',
+     'itemA','itemB','itemC','textF4','gradient','patternG','circleGroup',
+     'lineF6','boxOpenF6','f6a','f6b','f6c','f6d','f6e','f6f','f6L','textF6','replayBtn']
+    .map(k => [k, React.createRef()])
+  );
+
+  // ---- easing ----
+  clamp(x){ return x < 0 ? 0 : x > 1 ? 1 : x; }
+  p(t,a,b){ return this.clamp((t-a)/(b-a)); }
+  lerp(p,from,to){ return from + (to-from)*p; }
+  eOut(x){ return 1 - Math.pow(1-x,3); }
+  eInOut(x){ return x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x+2,3)/2; }
+  eBack(x){ const c1=1.70158, c3=c1+1; return 1 + c3*Math.pow(x-1,3) + c1*Math.pow(x-1,2); }
+
+  set(ref, prop, val){ const el=this.refsMap[ref].current; if(el) el.style[prop]=val; }
+
+  apply(t){
+    const {lerp,eOut,eInOut,eBack} = this;
+    const P=(a,b)=>this.p(t,a,b);
+    const END=this.dur();
+
+    // background pattern: fade + slow parallax drift
+    this.set('patternA','opacity', String(P(0,700)*0.95));
+    const par = eInOut(P(0,END*0.95));
+    this.set('patternA','transform', `translate(${lerp(par,-46,0)}px, ${lerp(par,-22,0)}px) scale(${lerp(par,1.05,1)})`);
+
+    // (1) bottom line draws across from the left
+    const lineP = eOut(P(300,2600));
+    this.set('line','clipPath', `inset(0 ${(1-lineP)*100}% 0 0)`);
+
+    // (1) closed red box appears just as the line tip reaches it
+    this.set('boxClosed','transform', `scale(${lerp(eBack(P(1230,1750)),0.5,1)})`);
+    this.set('boxClosed','opacity', String(t < 2750 ? P(1230,1650) : 0));
+    this.set('boxGrad','opacity',   String(t < 4650 ? P(2200,2700) : 0));
+    // open box fades in on top of the gradient box
+    this.set('boxOpen','opacity', String(P(4050,4650)));
+    this.set('boxOpen','transform', `scale(${lerp(eBack(P(4050,4750)),0.9,1)})`);
+
+    // (3) logo simply fades in, in place
+    this.set('logo','opacity', String(eOut(P(3100,4300))));
+
+    // message text (frame 4) rises in
+    this.set('textF4','opacity', String(P(5000,5700)));
+    this.set('textF4','transform', `translateY(${lerp(eOut(P(5000,5800)),42,0)}px)`);
+
+    // items burst out of the open box
+    const burst=(ref, start, dx, dy, rot)=>{
+      const pr = P(start, start+950);
+      const pos = eBack(pr), sc = eOut(pr);
+      this.set(ref,'opacity', String(P(start, start+220)));
+      this.set(ref,'transform', `translate(${lerp(pos,dx,0)}px, ${lerp(pos,dy,0)}px) rotate(${lerp(pos,rot,0)}deg) scale(${lerp(sc,0.12,1)})`);
+    };
+    burst('itemA', 4600, 150, 220, -34);
+    burst('itemB', 4750, 40, 580,  42);
+    burst('itemC', 4900, -80, 300, -22);
+
+    // (4) gradient sweeps in
+    const wipe = eInOut(P(8700,9550));
+    this.set('gradient','clipPath', `inset(0% ${lerp(wipe,100,0)}% 0% 0%)`);
+    this.set('patternG','opacity', String(P(8700,9550)*0.9));
+
+    // (A) white circle opens to reveal frame 6
+    const cr = eInOut(P(9600,10600));
+    this.set('circleGroup','clipPath', `circle(${lerp(cr,0,1049)}px at 1680px 918px)`);
+
+    // (B) bottom line draws across from the left (starts as circle finishes)
+    this.set('lineF6','opacity', String(P(10500,10700)));
+    this.set('lineF6','clipPath', `inset(0 ${(1-eOut(P(10500,11100)))*100}% 0 0)`);
+
+    // (C) center box pops in (starts as the line finishes)
+    this.set('boxOpenF6','opacity', String(P(11050,11500)));
+    this.set('boxOpenF6','transform', `scale(${lerp(eBack(P(11050,11600)),0.85,1)})`);
+
+    // peripheral parts emerge from the box
+    const OX=1790, OY=1400;
+    const fly=(ref, rx, ry, start)=>{
+      const dx=rx-OX, dy=ry-OY;
+      const emerge = eOut(P(start, start+1700));
+      const tx = lerp(emerge, -dx, 0);
+      const ty = lerp(emerge, -dy, 0);
+      const rot = lerp(emerge, -28, 0);
+      this.set(ref,'opacity', String(P(start, start+300)));
+      this.set(ref,'transform', `translate(${tx}px, ${ty}px) rotate(${rot}deg) scale(${lerp(eOut(P(start,start+900)),0.1,1)})`);
+    };
+    fly('f6a', 430,1180,11450);
+    fly('f6b', 920, 520,11500);
+    fly('f6c',2300, 470,11650);
+    fly('f6d',2920, 700,11550);
+    fly('f6e',3070,1190,11750);
+    fly('f6f',2470, 915,11600);
+    fly('f6L',1095,1270,11800);
+
+    this.set('textF6','opacity', String(P(11950,12600)));
+    this.set('textF6','transform', `translateY(${lerp(eOut(P(11950,12700)),34,0)}px)`);
+  }
+
+  rescale = () => {
+    const root=this.refsMap.root.current, stage=this.refsMap.stage.current;
+    if(!root||!stage) return;
+    const s = Math.min(root.clientWidth/3360, root.clientHeight/1634);
+    stage.style.transform = `scale(${s})`;
+    stage.style.position='absolute';
+    stage.style.left = ((root.clientWidth - 3360*s)/2)+'px';
+    stage.style.top  = ((root.clientHeight - 1634*s)/2)+'px';
+  };
+
+  loop = (now) => {
+    const t = now - this.t0;
+    const end = this.dur();
+    this.apply(Math.min(t, end));
+    if(t < end){
+      this.raf = requestAnimationFrame(this.loop);
+    } else {
+      const b=this.refsMap.replayBtn.current; if(b) b.style.opacity='1';
+    }
+  };
+
+  dur(){ return (this.props.durationSec ?? 13) * 1000; }
+
+  start = () => {
+    if(this.raf) cancelAnimationFrame(this.raf);
+    const b=this.refsMap.replayBtn.current; if(b) b.style.opacity='0';
+    this.t0 = performance.now();
+    this.raf = requestAnimationFrame(this.loop);
+  };
+
+  componentDidMount(){
+    window.__anim = this;
+    this.rescale();
+    window.addEventListener('resize', this.rescale);
+    this.apply(0);
+    setTimeout(this.start, 200);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('resize', this.rescale);
+    if(this.raf) cancelAnimationFrame(this.raf);
+  }
+
+  renderVals(){
+    const showReplay = this.props.replayButton ?? true;
+    return {
+      ...this.refsMap,
+      onReplay: showReplay ? this.start : null,
+    };
+  }
+}
+
+</script>
+</body>
+</html>
